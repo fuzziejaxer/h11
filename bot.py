@@ -8,6 +8,10 @@ client = commands.Bot(command_prefix="=", case_insensitive=True)
 async def on_ready():
     await client.change_presence(activity=discord.Game(name="Listening For Commands."))
     print(f"{client.user.name} is ready.")
+    
+@client.command()
+async def vote(ctx):
+    ctx.send("Vote For H11 Here: \n https://top.gg/bot/906611513052250172/vote")
 
 @client.command()
 @commands.has_permissions(administrator=True)
